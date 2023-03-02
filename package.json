@@ -5,7 +5,7 @@
   "main": "dist/index.html",
   "module": "dist/module.js",
   "description": "",
-  "homepage": "https://github.com/Malk0v/js-hw-12#readme",
+  "homepage": "https://github.com/Malk0v/js-hw-12",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/*.html",
