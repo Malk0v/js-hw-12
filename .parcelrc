@@ -1,9 +1,18 @@
 {
-  "extends": [
-    "@parcel/config-default"
-  ],
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.hbs": ["@parcel/transformer-handlebars"]
+  },
+  
+  "@parcel/transformer-css": {
+    "cssModules": {
+      "dashedIdents": true
+    }
+  },
+
   "reporters": [
     "...",
     "parcel-reporter-clean-dist"
   ]
 }
+

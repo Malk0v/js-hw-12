@@ -1,0 +1,59 @@
+[
+{
+"name": "Австралия",
+"capital": "Канберра",
+"currency": "Австралийский доллар (AUD)",
+"Language": "Английский",
+"population": 24970200,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/250px-Flag_of_Australia_%28converted%29.svg.png",
+"infected": false
+},
+
+{
+"name": "Боливия",
+"capital": "Сукре",
+"currency": "Боливиано (ВОВ)",
+"Language": "Испанский, кечуа, аймара, гуарани",
+"population": 10461053,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_Bolivia_%28state%29.svg/250px-Flag_of_Bolivia_%28state%29.svg.png.png",
+"infected": true
+},
+
+{
+"name": "Великобритания",
+"capital": "Лондон",
+"currency": "Фунт стерлингов ( GBP)",
+"language": "Английский",
+"population": 63395574,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/250px-Flag_of_the_United_Kingdom_%281-2%29.svg.png",
+"infected": false
+},
+
+{
+"name": "Ямайка",
+"capital": "Кингстон",
+"currency": "Ямайский доллар (JMD)",
+"language": "Английский",
+"population": 2868380,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/250px-Flag_of_Jamaica.svg.png",
+"infected": false},
+
+{
+"name": "Швеция",
+"capital": "Стокгольм",
+"currency": "Шведская крона (SEK)",
+"lanquage": "Шведский",
+"population": 9723809,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/250px-Flag_of_Sweden.svg.png",
+"infected": true
+},
+{
+"name": "Португалия",
+"capital": "Лиссабон",
+"currency": "Espo (EUR)",
+"language": "Португальский",
+"population": 10799270,
+"flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/250px-Flag_of_Portugal.svg.png",
+"infected": true
+}
+]

@@ -1,28 +1,32 @@
-console.log('hello world');
+import NewsApiService from "./components/load-more";
 
 const refs = {
-    searchForm: document.querySelector(".js-search-form"), 
-    articlesContainer: document.querySelector('.js-articles-container'),
+  searchForm: document.querySelector('.js-search-form'),
+  articlesContainer: document.querySelector('.js-articles-container'),
+  loadMoreBtn: document.querySelector('[data-action="load-more"]'),
 };
 
-console.log(refs.searchForm);
-console.log(refs.articlesContainer);
+
+console.log(refs.searchForm)
+console.log(refs.articlesContainer)
+console.log(refs.loadMoreBtn);
+
+const newsApiService = new NewsApiService();
+
+console.log(newsApiService);
 
 refs.searchForm.addEventListener('submit', onSearch);
+refs.loadMoreBtn.addEventListener('click', onLoadMore);
+
 
 function onSearch(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const searchQuery = e.currentTarget.elements.query.value;
+  newsApiService.query = e.currentTarget.elements.query.value;
+  newsApiService.resetPage();
+  newsApiService.fetchArticles();
+}
 
-    const options = {
-        headers: {
-            Authorization: '4330ebfabc654a6992c2a7923173a3',
-        }
-    }
-
-    const url =
-        url = `https: //newsapt.org/v2/everything?q=${searchQuery}&language=en&pageSize=56page=1`;
-    
-    fetch(url, options).then(r => r.json()).then(console.log);
+function onLoadMore() {
+  newsApiService.fetchArticles();
 }

@@ -1,28 +1,28 @@
-// import Handlebars from 'handlebars';
-// const templates = require('../templates/card.hbs');
-// const Handlebars = require('handlebars');
+import pokemonCardTpl from '../templates/card.hbs';
 
-// import pokemonCardTpl from '../templates/card.hbs';
+console.log(pokemonCardTpl);
 
-// module.exports = function (data) {
-//   const compiledTemplate = Handlebars.compile(template);
-//   return compiledTemplate(data);
-// };
+const refs = {
+  cardContainer: document.querySelector('.js-card-conteiner'),
+};
 
-// const refs = {
-//     cardConteiner: document.querySelector('.js - card - conteiner'),
-// }
+console.log(refs.cardContainer);
 
-// fetch.Pokemon(5).then(renderPokemonCard).catch(error => console.log(error));
+fetchPokemon(6)
+  .then(renderPokemonCard)
+    .catch(error => console.log(error));
+  
+function fetchPokemon(pokemonId) {
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+        .then(
+            response => {
+                return response.json();
+            },
+        );
+}
 
-// function fetchPokemon(pokemonId) {
-//     return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(
-//         response => {
-//             return response.json();
-//         },)
-// }
+function renderPokemonCard(pokemon) {
+    const markup = pokemonCardTpl(pokemon);
+    refs.cardContainer.insertAdjacentHTML('beforeend' , markup);
 
-// function renderPokemonCard(pokemon) {
-//     const markup = pokemonCardTpl(pokemon);
-//     refs.cardContainer.innerHTML = markup
-// }
+}
