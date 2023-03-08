@@ -2,10 +2,10 @@
   "name": "js-hw-12",
   "version": "2.0.0",
   "source": "src/index.js",
-  "main": "dist/index.html",
+  "main": "dist/main.js",
   "module": "dist/module.js",
   "description": "",
-  "homepage": "https://github.com/Malk0v/js-hw-12",
+  "homepage": "https://github.com/Malk0v/js-hw-12#readme",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/*.html",
@@ -21,6 +21,7 @@
     "url": "https://github.com/Malk0v/js-hw-12/issues"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.8.3",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
@@ -28,6 +29,11 @@
   "dependencies": {
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-transformer-handlebars": "^1.0.0",
-    "modern-normalize": "^1.1.0"
+    "postcss": "^8.0.0",
+    "postcss-modules": "^3.2.2",
+    "autoprefixer": "9.0.0",
+    "prettier": "^2.1.2",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6"
   }
 }
