@@ -1,38 +1,34 @@
-export default class NewApiServise {
-  constructor() {
-    this.searchQuery = '';
-    this.page = 1;
+export default class LoadMoreBtn {
+  constructor({ selector, hidden = false }) {
+    this.refs = this.getRefs(selector);
+
+    hidden && this.hide();
   }
 
-  fetchArticles() {
-    const options = {
-      headers: {
-        Authorization: '1207c88ea12a40948c6a5f2f9fe75304',
-      },
-    };
+  getRefs(selector) {
+    const refs = {};
+    refs.button = document.querySelector(selector);
+    refs.label = refs.button.querySelector('.label');
+    refs.spinner = refs.button.querySelector('.spinner');
 
-    const url = `https://newsapi.org/v2/everything?q=${this.searchQuery}&pageSize=5&page=${this.page}`;
-
-    fetch(url, options)
-      .then(r => r.json())
-      .then(data => {
-        this.incrementPage();
-      });
+    return refs;
+  }
+  enable() {
+    this.refs.button.disabled = false;
+    this.refs.label.textContent = "Показать ещё";
+    this.refs.spinner.classList.add('is-hidden');
   }
 
-  incrementPage() {
-    this.page += 1;
+  disabled() {
+  this.refs.button.disabled = true;
+  this.refs.label.textContent = "Загружаем...";
+  this.refs.spinner.classList.remove('s-hidden');
+}
+  show() {
+    this.refs.button.classList.remove('is-hidden');
   }
-
-  resetPage() {
-    this.page = 1;
+  
+  hide() {
+    this.refs.button.classList.add('is-hidden');
   }
-
-  get query() {
-    return this.searchQuery;
-  }
-
-  set query(newQuery) {
-    this.searchQuery = newQuery;
-  }
-};
+}
